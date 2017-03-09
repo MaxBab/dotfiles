@@ -1,0 +1,49 @@
+Atom useful shortcuts:
+----------------------
+
+[General]
+* Command palette                       - (Ctrl + Shift + P)
+* Find a file in Project directory      - (Ctrl + T)/(Ctrl + P)
+* Markdown Preview                      - (Ctrl + Shift + M)
+
+[Window Management]
+* Open a new file                       - (Ctrl + N)
+* Close the tab                         - (Ctrl + W)
+* Move between the tabs                 - (Ctrl + PgUp/PgDn)
+* Change the order of the tabs          - (Ctrl + Shift + PgUp/PgDn)
+
+[Tree View]
+* Open/close the Tree View              - (Ctrl + \)
+* Focus on/off the Tree View            - (Alt + \)
+* Create a new folder                   - (Shift + a)           Once focused on Tree View
+* Create a new file                     - (a)                   Once focused on Tree View
+* Rename or move the file               - (m)                   Once focused on Tree View
+* Delete the folder/file                - (delete button)       Once focused on Tree View
+* Copy folder path to the clipboard     - (Ctrl + Shift + C)
+
+[Editing]
+* Duplicate lines                       - (Ctrl + Shift + D)
+* Delete entire line                    - (Ctrl + Shift + K)
+* Delete the word after the cursor      - (Ctrl + Alt + D)
+* Select entire line                    - (Ctrl + L)
+* Find/Replace a string in current file - (Ctrl + F)
+* Move to the next search result        - (F3)
+* Find a string in Project directory    - (Ctrl + Shift + F)
+* Project find results                  - (Ctrl + Shift + T)
+* Move the line up or down              - (Ctrl + Up/Down)      When the cursor at the start of the line. Whole block could be moved.
+* Select the next matching character    - (Ctrl + D)            (When a word is highlighted). This command allows you to select the next matching word or characters
+                                                                to that which is highlighted. You can then (using the auto generated multiple cursors) delete, edit
+                                                                or update the highlighted values.
+* Unselect the next matching character  - (Ctrl + U)            If you’re selecting the next matching characters, sometimes you go too far. This shortcut will unselect
+                                                                the most recently selected characters in reverse order.
+* Select all matching characters        - (Alt + F3)            Sometimes you want to bulk edit all the matching characters in the document, rather than pressing Cmd/Ctrl + D
+                                                                for every one. This shortcut selects everything that matches what you’ve selected.
+* Toggle comments (on and off)          - (Ctrl + /)            There may be cases where you want to comment out a line or collections of lines.
+                                                                This shortcut appropriately comments out the current line (or selection of lines) with the correct
+                                                                commenting syntax for whatever language you are in.
+* Multiple lines selection              - (Shift + Alt + Down)
+* Fold current block                    - (Ctrl + Alt + [)
+* Unfold current block                  - (Ctrl + Alt + ])
+* Fold All                              - (Ctrl + Alt + Shift + [)
+* Unfold All                            - (Ctrl + Alt + Shift + ])
+* Compare files                         - (Ctrl + Alt + C)
