@@ -1,0 +1,87 @@
+VIM useful shortcuts:
+---------------------
+
+[Move]
+Cursor move left                        - h
+Cursor move right                       - l
+Cursor move up                          - k
+Cursor move down                        - j
+Page Up                                 - Ctrl-B
+Page Down                               - Ctrl-F
+1/2 Page Up                             - Ctrl-U
+1/2 Page Down                           - Ctrl-D
+Move screen down                        - Ctrl-E
+Move screen up                          - Ctrl-Y
+Move to the top of the screen           - H
+Move to the center of the screen        - M
+Move to the bottom of the screen        - L
+Move to the start of the line           - 0,^
+Move to the center of the line          - gm
+Move to the end of the line             - $
+Move over the words left                - b, B, ge, gE
+Move over the words right               - w, W, e, E
+
+[Mode]
+Visual mode                             - v, V, Ctrl-V
+Vim modes help                          - :help vim-modes
+
+[Insert/Replace]
+Insert character before the cursor      - i
+Insert character after the cursor       - a
+Insert character at the start of line   - I
+Insert character at the end of line     - A
+Insert upper the line                   - O
+Insert under the line                   - o
+Replace current character               - r
+
+[Save/Exit]
+Exit the file                           - :q
+Exit the file without saving            - :q!
+Save the file                           - :w
+Save the file and exit                  - :wq
+Open a new tab                          - :tabedit
+Open a new file in split view           - :sp /path/to/the/file
+
+[Copy/Paste]
+Delete the text after the cursor        - D
+Delete current cursor                   - x
+Delete current line                     - dd
+Copy entire line                        - yy
+Paste after the line                    - p
+Paste before the line                   - P
+
+[Search]
+Search for the text                     - /
+Various text search is available        - /text | /text.*othertext | /test \d\$ | /def funcname
+Go to the next search result            - n
+Go to the previous search result        - N
+Search and replace                      - %s/\(ema.s\|tex.mat.\)/vim (1\ - sux)/
+                                          1) % - Where to look (1,100 500,$ - From the first line up to 100, or from 500 line to the end)
+                                          2) \(ema.s\|tex.mat.\) - RegExp
+                                          3) \1 - First match
+
+[Undo/Redo]
+Undo                                    - u
+Redo                                    - Ctrl-r
+
+[Tabs]
+Open a new tab                          - :tabnew
+Open a new tab and specify a name       - :tabedit <new_file_name>
+List existing tabs                      - :tabs
+Go to the next tab                      - :tabnext
+Go to the previous tab                  - :tabprevious
+Go to a specific tab number             - :tabnext <tab_number>
+Get more tab options                    - :tab (and press double tab)
+
+[Windows]
+Split window horizontally               - :split <file_name>
+Split window vertically                 - :vsplit <filename>
+Move between windows                    - Ctrk-w h,j,k,l
+Close window                            - Ctrl-w q
+Vertical diff split                     - :vertical diffsplit file1 file2
+
+[Multiple opened files]
+In case multiple files opened - vim file1 file2 file3
+Move to the next file                   - :n
+Move to the previous file               - :N
+Show opened files                       - :args
