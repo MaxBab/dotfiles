@@ -22,3 +22,7 @@
         ui = true
 [merge]
 	conflictstyle = diff3
+[user]
+	name = Maxim Babushkin
+[push]
+	default = simple
