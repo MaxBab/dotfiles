@@ -76,7 +76,7 @@ Get more tab options                    - :tab (and press double tab)
 [Windows]
 Split window horizontally               - :split <file_name>
 Split window vertically                 - :vsplit <filename>
-Move between windows                    - Ctrk-w h,j,k,l
+Move between windows                    - Ctrl-w h,j,k,l
 Close window                            - Ctrl-w q
 Vertical diff split                     - :vertical diffsplit file1 file2
 
