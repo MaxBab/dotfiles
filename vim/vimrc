@@ -44,7 +44,7 @@ Plugin 'scrooloose/syntastic'           " Syntax checking plugin for Vim
 Plugin 'tpope/vim-commentary'           " Comment stuff out
 Plugin 'mitsuhiko/vim-sparkup'          " Sparkup (XML/jinja/htlm-django/etc.) support
 
-" --- Python ---
+"--------------------=== Python ===-------------------
 Plugin 'davidhalter/jedi-vim'           " Awesome Python autocompletion with VIM
 Plugin 'klen/python-mode'               " Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box
 Plugin 'mitsuhiko/vim-jinja'            " Jinja support for vim
@@ -93,25 +93,23 @@ endif
 tab sball
 set switchbuf=useopen
 
-" Use system clipboard
-set clipboard=unnamedplus
-
 " Customize the wildmenu
 set wildmenu
 set wildignore+=*.dll,*.o,*.pyc,*.bak,*.exe,*.jpg,*.jpeg,*.png,*.gif,*$py.class,*.class,*/*.dSYM/*,*.dylib
 set wildmode=list:full
 
-" Don't bell and blink
-set visualbell t_vb=    " turn off error beep/flash
-set novisualbell        " turn off visual bell
-set enc=utf-8           " utf-8 default encoding
-set ls=2                " always show status bar
-set incsearch           " incremental search
-set hlsearch            " highlighted search results
-set number              " line numbers
-set scrolloff=5         " keep some more lines for scope
-set showmatch           " show matching brackets/parenthesis
-set matchtime=0         " don't blink when matching
+set visualbell t_vb=        " turn off error beep/flash
+set novisualbell            " turn off visual bell
+set enc=utf-8               " utf-8 default encoding
+set ls=2                    " always show status bar
+set incsearch               " incremental search
+set hlsearch                " highlighted search results
+set number                  " line numbers
+set scrolloff=5             " keep some more lines for scope
+set showmatch               " show matching brackets/parenthesis
+set matchtime=0             " Don't blink when matching
+set path+=**                " Search down into subfolders
+set clipboard=unnamedplus   " Use system clipboard
 
 " Swaps and backups
 if has("win32") || has("win64")
@@ -224,13 +222,13 @@ autocmd FileType python map <buffer> <leader>8 :PymodeLint<CR>
 "=====================================================
 " Languages support
 "=====================================================
-" --- Ansible ---
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+"------------------=== Ansible ===-------------------
+autocmd FileType yaml setlocal ai ts=2 sts=2 sw=2 expandtab
 
-" --- Make ---
+"-------------------=== Make ===---------------------
 autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
 
-" --- Python ---
+"------------------=== Python ===--------------------
 let python_highlight_all=1
 let python_highlight_exceptions=0
 let python_highlight_builtins=0
@@ -244,10 +242,10 @@ let g:syntastic_python_checkers = ['flake8', 'python']
 let g:syntastic_python_flake8_args='--ignore=E121,E128,E711,E301,E261,E241,E124,E126,E721
 \ --max-line-length=80'
 
-" --- Vim ---
+"---------------------=== Vim ===---------------------
 autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 
-" --- template language support (SGML / XML too) ---
+"---- Template language support (SGML / XML too) -----
 autocmd FileType xml,html,htmljinja,htmldjango setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html,htmljinja,htmldjango imap <buffer> <c-e> <Plug>SparkupExecute
 autocmd FileType html,htmljinja,htmldjango imap <buffer> <c-l> <Plug>SparkupNext
@@ -277,15 +275,15 @@ endfunction
 "=====================================================
 " User hotkeys
 "=====================================================
-"
-" NERDTree
-map <F1> :NERDTreeToggle<CR>    " browse the list of files in the current directory
 
-" Unite settings
-nnoremap <F2> :Unite buffer<CR> " browse a list of the currently opened buffers
+" NERDTree - Browse the list of files in the current directory
+map <F1> :NERDTreeToggle<CR> 
 
-" TaskList settings
-map <F3> :TaskList<CR> " show pending tasks list
+" Unite settings - Browse a list of the currently opened buffers
+nnoremap <F2> :Unite buffer<CR> 
+
+" TaskList settings - Show pending tasks list
+map <F3> :TaskList<CR> 
 
 " TagBar settings
 map <F4> :TagbarToggle<CR>
@@ -330,3 +328,4 @@ nnoremap <M-]> :vertical resize -5<cr>
 
 " Activate autocomplete at <Ctrl+Space>
 inoremap <C-space> <C-x><C-o>
+
