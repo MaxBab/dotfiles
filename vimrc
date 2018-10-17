@@ -1,6 +1,23 @@
+"=====================================================
+" Install plugins with Vundle
+"=====================================================
+" 1. Clone Vundle repo into your .vim/bundle directory.
+"    https://github.com/VundleVim/Vundle.vim.git
+" 2. Install the plugins.
+"    :PluginInstall
+"    On first plugin install, the following error pops
+"    up - "E185: Cannot find color scheme 'gruvbox'"
+"    Press Enter to continue and it will install the
+"    plugin and will find the right color theme.
+" 3. In order to uninstall plugin, remove it from the
+"    list and execute the following command:
+"    :PluginClean
+"=====================================================
+" Note - Hotkeys located at the bottom of the file
+"=====================================================
+
 set nocompatible " be iMproved, required
 filetype off     " required
-
 
 "=====================================================
 " Vundle settings
@@ -20,6 +37,7 @@ Plugin 'vim-airline/vim-airline'        " Lean & mean status/tabline for vim tha
 Plugin 'vim-airline/vim-airline-themes' " Themes for vim-airline
 Plugin 'rosenfeld/conque-term'          " Consoles as buffers
 Plugin 'tpope/vim-surround'             " Parentheses, brackets, quotes, XML tags, and more
+Plugin 'morhetz/gruvbox'                " Gruvbox vim theme
 
 "---------------=== Languages support ===-------------
 Plugin 'scrooloose/syntastic'           " Syntax checking plugin for Vim
@@ -62,18 +80,11 @@ if has("gui_running")
 endif
 set ttyfast
 
-colorscheme nightly
-" set guifont=Consolas:h13
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-
-" Enable Syntax Colors
-" in GUI mode we go with fruity and Monaco 13
-" in CLI mode myterm looks better (fruity is GUI only)
+" Set color scheme
 syntax on
-if has("gui_running")
-    " set macmeta " comment this line if you're not using Mac OS
-    set lines=50 columns=125
-endif
+colorscheme gruvbox
+set background=dark
+
 " special settings for vim
 if has("mac")
     let macvim_hig_shift_movement = 1
@@ -319,4 +330,3 @@ nnoremap <M-]> :vertical resize -5<cr>
 
 " Activate autocomplete at <Ctrl+Space>
 inoremap <C-space> <C-x><C-o>
-
