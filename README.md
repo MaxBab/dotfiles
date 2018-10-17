@@ -1,3 +1,4 @@
-# Configs
+# Dotfiles
 
-Various config files
+- Configs of dotfiles
+- Configs user hotkeys
