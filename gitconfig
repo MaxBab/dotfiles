@@ -30,3 +30,5 @@
 	name = Maxim Babushkin
 [push]
 	default = simple
+[core]
+	editor = vim
