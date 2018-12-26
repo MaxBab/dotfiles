@@ -1,0 +1,34 @@
+---
+
+- hosts: '{{ remote_host }}'
+  gather_facts: no
+  vars:
+    vundle_repo: https://github.com/VundleVim/Vundle.vim.git
+    vimrc_file: https://raw.githubusercontent.com/MaxBab/dotfiles/master/vim/vimrc
+  tasks:
+    - name: Install VIM
+      package:
+        name: 'vim'
+        state: present
+
+    - name: Create .vim directory
+      file:
+        path: '~/.vim/'
+        mode: 0755
+        state: directory
+
+    - name: Clone Vundle
+      git:
+        repo: '{{ vundle_repo }}'
+        dest: '~/.vim/bundle/Vundle.vim'
+        version: master
+
+    - name: Clone vimrc config file
+      get_url:
+        url: '{{ vimrc_file }}'
+        dest: '~/.vimrc'
+        mode: 0644
+
+    - name: Install VIM plugins
+      shell: echo -ne '\n' | vim +PluginInstall +qall
+
