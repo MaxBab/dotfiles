@@ -1,7 +1,7 @@
 ---
 
 - hosts: '{{ remote_host }}'
-  gather_facts: no
+  gather_facts: yes
   vars:
     vundle_repo: https://github.com/VundleVim/Vundle.vim.git
     vimrc_file: https://raw.githubusercontent.com/MaxBab/dotfiles/master/vim/vimrc
@@ -10,6 +10,7 @@
       package:
         name: 'vim'
         state: present
+      become: true
 
     - name: Create .vim directory
       file:
