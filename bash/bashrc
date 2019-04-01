@@ -14,7 +14,8 @@ HISTFILESIZE=2000
 
 # Virtual Wrapper config
 export WORKON_HOME=$HOME/Projects/Envs
-source /usr/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source ~/.local/bin/virtualenvwrapper.sh
 
 # Powerline-go config
 function _update_ps1() {
@@ -27,6 +28,3 @@ fi
 
 # Allow passwordless access to libvirt daemon
 export LIBVIRT_DEFAULT_URI=qemu:///system
-
-# Terraform autocomplete
-complete -C /opt/terraform/terraform terraform
