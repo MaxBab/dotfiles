@@ -32,3 +32,6 @@
 	default = simple
 [core]
 	editor = vim
+	sshCommand = ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
+[format]
+	signOff = true
