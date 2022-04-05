@@ -5,17 +5,20 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# Update PATH for Go
+export PATH=$PATH:$(go env GOPATH)/bin
+
 # History file config
 # Don't put duplicate lines in the history. See bash(1) for more options
 HISTCONTROL=ignoredups:ignorespace
 # For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=100000
 
 # Virtual Wrapper config
 export WORKON_HOME=$HOME/Projects/Envs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source ~/.local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Powerline-go config
 function _update_ps1() {
@@ -28,3 +31,13 @@ fi
 
 # Allow passwordless access to libvirt daemon
 export LIBVIRT_DEFAULT_URI=qemu:///system
+
+# Autocompletion
+source <(kubectl completion bash)
+source <(oc completion bash)
+
+# Set AWS profile
+export AWS_PROFILE=acm_ci
+
+# GO workspace
+export GOPATH=~/Projects/go_workspace/
